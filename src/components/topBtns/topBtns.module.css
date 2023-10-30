@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.topBtn {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.closeBtn {
+    background-color: #FF5D5B;
+}
+
+.minimizeBtn {
+    background-color: #FFBB39;
+}
+
+.zoomBtn {
+    background-color: #00CD4E;
+}
