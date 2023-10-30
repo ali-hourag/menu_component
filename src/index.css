@@ -2,6 +2,11 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+:root {
+  --bg-image-light: url("https://res.cloudinary.com/dqdysl9ep/image/upload/v1698665310/component-block-auth/windows11-wallpaper_c8c5wt.jpg");
+  --bg-image-dark: url("https://res.cloudinary.com/dqdysl9ep/image/upload/v1698671511/component-block-auth/windows11-dark_ngdema.jpg");
+}
+
 *,
 *::before,
 *::after {

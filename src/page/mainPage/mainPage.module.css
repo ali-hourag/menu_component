@@ -1,13 +1,17 @@
-:root {
-    --bg-image: url("https://res.cloudinary.com/dqdysl9ep/image/upload/v1698671511/component-block-auth/windows11-dark_ngdema.jpg");
-}
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100dvh;
     width: 100vw;
-    background-image: var(--bg-image);
+    background-image: var(--bg-image-light);
     background-size: cover;
+}
+
+.lightBgImage {
+    background-image: var(--bg-image-light);
+}
+
+.darkBgImage {
+    background-image: var(--bg-image-dark);
 }

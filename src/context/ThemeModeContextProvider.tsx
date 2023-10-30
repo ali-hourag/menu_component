@@ -1,6 +1,6 @@
 import { createContext, useState } from "react"
 
-enum ThemeModeType {
+export enum ThemeModeType {
     DARK_MODE = "dark-mode",
     LIGHT_MODE = "light-mode"
 }
@@ -10,10 +10,10 @@ type ThemeModeContext = {
     changeThemeMode: (newThemeMode: ThemeModeType) => void
 }
 
-export const themeModeContext = createContext<ThemeModeContext>({ themeMode: ThemeModeType.LIGHT_MODE, changeThemeMode: () => { } });
+export const themeModeContext = createContext<ThemeModeContext>({ themeMode: ThemeModeType.DARK_MODE, changeThemeMode: () => { } });
 
 const ThemeModeContextProvider = ({ ...props }) => {
-    const [themeMode, setThemeMode] = useState<ThemeModeType>(ThemeModeType.LIGHT_MODE);
+    const [themeMode, setThemeMode] = useState<ThemeModeType>(ThemeModeType.DARK_MODE);
     const changeThemeMode = (newThemeMode: ThemeModeType) => {
         setThemeMode(newThemeMode);
     }
