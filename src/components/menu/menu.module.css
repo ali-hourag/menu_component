@@ -1,5 +1,9 @@
 .container {
-    width: 100%;
-    height: 100%;
-    cursor: url("https://res.cloudinary.com/dqdysl9ep/image/upload/v1698666860/component-block-auth/cursor_3_qlir0h.png"), auto;
+    width: 256px;
+    height: 80%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.67);
+    box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset,
+        4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
+    backdrop-filter: blur(6px);
 }
