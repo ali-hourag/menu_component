@@ -5,12 +5,18 @@ import { ThemeModeType } from '../../context/ThemeModeContextProvider';
 
 
 const Logo = () => {
-    const { themeMode } = useThemeModeContext();
+    const { themeMode, changeThemeMode } = useThemeModeContext();
+
+    const handleLogoClicked = () => {
+        themeMode === ThemeModeType.DARK_MODE ?
+            changeThemeMode(ThemeModeType.LIGHT_MODE) : changeThemeMode(ThemeModeType.DARK_MODE)
+    }
 
     return (
         <div className={styles.container}>
             <Icon icon="icon-park-outline:graphic-design-two"
-                className={`${styles.logo} ${themeMode === ThemeModeType.LIGHT_MODE ? styles.logoLight : ""}`} />
+                className={`${styles.logo} ${themeMode === ThemeModeType.LIGHT_MODE ? styles.logoLight : ""}`}
+                onClick={handleLogoClicked} />
         </div>
     )
 }
