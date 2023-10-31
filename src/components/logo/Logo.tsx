@@ -13,7 +13,7 @@ const Logo = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${themeMode === ThemeModeType.LIGHT_MODE ? styles.containerLightMode : ""} `}>
             <Icon icon="icon-park-outline:graphic-design-two"
                 className={`${styles.logo} ${themeMode === ThemeModeType.LIGHT_MODE ? styles.logoLight : ""}`}
                 onClick={handleLogoClicked} />

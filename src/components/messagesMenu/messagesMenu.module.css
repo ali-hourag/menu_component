@@ -1,1 +1,70 @@
-.container {}
+.container {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 2s;
+    -webkit-transition: color 2s;
+    -moz-transition: color 2s;
+    -ms-transition: color 2s;
+    -o-transition: color 2s;
+}
+
+.messagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.profilesContainer {
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.47);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -ms-transition: background-color 2s;
+    -o-transition: background-color 2s;
+}
+
+.messagesExtender {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 75%;
+    background-color: rgb(49, 140, 231);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.arrowIcon {
+    width: 20px;
+    height: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.profilesContainerLightMode {
+    background-color: rgba(255, 255, 255, 0.47);
+}
+
+.messagesLightMode {
+    color: rgb(0, 0, 0, .8);
+}

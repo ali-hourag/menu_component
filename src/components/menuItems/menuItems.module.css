@@ -3,4 +3,39 @@
     grid-template-rows: repeat(1fr, 7);
     justify-content: center;
     align-items: center;
+    border-bottom: .5px solid rgba(255, 255, 255, 0.3);
+    transition: border-bottom 2s;
+    -webkit-transition: border-bottom 2s;
+    -moz-transition: border-bottom 2s;
+    -ms-transition: border-bottom 2s;
+    -o-transition: border-bottom 2s;
+}
+
+.menuIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuIcon {
+    width: 50%;
+    height: 50%;
+}
+
+.menuIcon,
+.title {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 2s;
+    -webkit-transition: color 2s;
+    -moz-transition: color 2s;
+    -ms-transition: color 2s;
+    -o-transition: color 2s;
+}
+
+.containerLightMode {
+    border-bottom: .5px solid rgba(0, 0, 0, .4);
+}
+
+.menuLightMode {
+    color: rgb(0, 0, 0, .8);
 }
