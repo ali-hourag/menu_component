@@ -1,4 +1,7 @@
 .container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 8%;
     display: flex;
     justify-content: center;
     align-items: center;

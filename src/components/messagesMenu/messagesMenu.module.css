@@ -1,4 +1,7 @@
 .container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 34%;
     display: grid;
     grid-template-rows: 1fr 5fr;
     justify-content: center;
@@ -102,10 +105,6 @@
 
 .profileUserContainerLightMode:not(:last-child) {
     border-bottom: .5px solid rgba(0, 0, 0, .1);
-}
-
-.messagesLightMode {
-    color: rgb(0, 0, 0, .8);
 }
 
 .loader {

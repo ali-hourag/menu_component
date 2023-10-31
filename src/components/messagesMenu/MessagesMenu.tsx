@@ -25,7 +25,7 @@ const MessagesMenu = () => {
     return (
         <div className={styles.container}>
             <h5 className={`${styles.title} 
-            ${themeMode === ThemeModeType.LIGHT_MODE ? styles.messagesLightMode : ""}`}>
+            ${themeMode === ThemeModeType.LIGHT_MODE ? "menu-msgs-light-mode" : ""}`}>
                 MESSAGES
             </h5>
             <div className={styles.messagesContainer}>

@@ -64,3 +64,12 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/*General styles*/
+.border-bottom_light-mode {
+  border-bottom: .5px solid rgba(0, 0, 0, .4);
+}
+
+.menu-msgs-light-mode {
+  color: rgb(0, 0, 0, .8);
+}

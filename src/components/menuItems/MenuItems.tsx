@@ -11,14 +11,14 @@ const MenuItems = () => {
         "game-icons:graduate-cap", "mdi:security-lock", "mdi:thunder-circle"]
 
     return (
-        <div className={`${styles.container} ${themeMode === ThemeModeType.LIGHT_MODE ? styles.containerLightMode : ""} `}>
-            <h5 className={`${styles.title} ${themeMode === ThemeModeType.LIGHT_MODE ? styles.menuLightMode : ""}`}>
+        <div className={`${styles.container} ${themeMode === ThemeModeType.LIGHT_MODE ? "border-bottom_light-mode" : ""} `}>
+            <h5 className={`${styles.title} ${themeMode === ThemeModeType.LIGHT_MODE ? "menu-msgs-light-mode" : ""}`}>
                 MENU
             </h5>
             {iconsArray.map((icon, index) => (
                 <div className={styles.menuIconContainer} key={index}>
                     <Icon icon={icon} hFlip={true}
-                        className={`${styles.menuIcon} ${themeMode === ThemeModeType.LIGHT_MODE ? styles.menuLightMode : ""}`} />
+                        className={`${styles.menuIcon} ${themeMode === ThemeModeType.LIGHT_MODE ? "menu-msgs-light-mode" : ""}`} />
                 </div>
             ))}
         </div>
