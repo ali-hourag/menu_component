@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100vw;
+    background-image: var(--bg-image-light);
+    background-size: cover;
+    transition: background 2s;
+    -webkit-transition: background 2s;
+    -moz-transition: background 2s;
+    -ms-transition: background 2s;
+    -o-transition: background 2s;
+}
+
+.lightBgImage {
+    background-image: var(--bg-image-light);
+}
+
+.darkBgImage {
+    background-image: var(--bg-image-dark);
+}
