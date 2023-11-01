@@ -33,9 +33,19 @@ const MessagesMenu = () => {
                 ${themeMode === ThemeModeType.LIGHT_MODE ? styles.profilesContainerLightMode : ""}`}>
                     {users ?
                         users.map((user, index) => (
-                            <div key={index} className={`${styles.profileUserContainer} 
-                            ${themeMode === ThemeModeType.LIGHT_MODE ? styles.profileUserContainerLightMode : ""}`}>
-                                <img src={user.profile_picture} className={styles.img} />
+                            <div key={index} className={styles.profileUserContainer}>
+                                <div className={styles.porfilePictureEntryContainer}>
+                                    <div className={`${styles.porfilePictureContainer}  ${index !== users.length - 1 ? styles.profileBorderBottom : ""}`}>
+                                        <img src={user.profile_picture} className={styles.img} />
+                                    </div>
+                                </div>
+                                <div className={styles.username}>
+                                    <div className={styles.messagingContainer}>
+                                        <span className={styles.messagingDot}></span>
+                                        <span className={styles.messagingDot}></span>
+                                        <span className={styles.messagingDot}></span>
+                                    </div>
+                                </div>
                             </div>
                         ))
                         :
