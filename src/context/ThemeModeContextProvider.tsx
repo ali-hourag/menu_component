@@ -24,4 +24,4 @@ const ThemeModeContextProvider = ({ ...props }) => {
     )
 }
 
-export default ThemeModeContextProvider
+export default ThemeModeContextProvider;

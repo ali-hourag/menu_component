@@ -24,6 +24,15 @@
     width: 80px;
     height: 100%;
     position: relative;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+}
+
+.messagesContainerExtended {
+    width: 260px;
 }
 
 .profilesContainer {
@@ -50,8 +59,14 @@
     justify-content: flex-start;
     align-items: center;
     margin: 0 auto;
-    width: 200px;
+    width: 260px;
     height: 100%;
+    position: relative;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
 }
 
 .porfilePictureEntryContainer {
@@ -93,12 +108,31 @@
 }
 
 .username {
-    flex-basis: 120px;
+    flex-basis: 180px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 100%;
     width: 100%;
+    overflow: hidden;
+}
+
+.messageProfileName {
+    position: relative;
+    left: -200px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    transition: left 1.4s, opacity .5s, color 2s;
+    -webkit-transition: left 1.4s, opacity .5s, color 2s;
+    -moz-transition: left 1.4s, opacity .5s, color 2s;
+    -ms-transition: left 1.4s, opacity .5s, color 2s;
+    -o-transition: left 1.4s, opacity .5s, color 2s;
+}
+
+.messageProfileNameExtended {
+    left: 0;
+    opacity: 1;
 }
 
 .messagingContainer {
@@ -108,15 +142,25 @@
     align-items: center;
     visibility: hidden;
     gap: 3px;
-    margin: -15px;
-    width: 25%;
-    height: 30%;
+    margin-left: -15px;
+    width: 30px;
+    height: 15px;
+    position: absolute;
     background-color: rgb(49, 140, 231);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+}
+
+.messagingContainerExtended {
+    opacity: 0;
 }
 
 .showMessaging {
@@ -148,6 +192,15 @@
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+}
+
+.messagesExtenderExtended {
+    width: 50%;
 }
 
 
