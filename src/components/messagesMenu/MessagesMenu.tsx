@@ -12,7 +12,11 @@ const MessagesMenu = () => {
 
     const [users, setUsers] = useState<UserType[] | null>();
     const { themeMode } = useThemeModeContext();
-    const { extendedMenu } = useExtendedMenuContext();
+    const { extendedMenu, changeExtendedMenu } = useExtendedMenuContext();
+
+    const handleProfileImgClicked = () => {
+        if (!extendedMenu) changeExtendedMenu();
+    }
 
     useEffect(() => {
         (async function getUsersApi() {
@@ -40,7 +44,7 @@ const MessagesMenu = () => {
                             ${extendedMenu ? styles.profileUserContainerExtended : ""}`}>
                                 <div className={styles.porfilePictureEntryContainer}>
                                     <div className={`${styles.porfilePictureContainer}  ${index !== users.length - 1 ? styles.profileBorderBottom : ""}`}>
-                                        <img src={user.profile_picture} className={styles.img} />
+                                        <img src={user.profile_picture} className={styles.img} onClick={handleProfileImgClicked} />
                                     </div>
                                 </div>
                                 <div className={`${styles.username} 
