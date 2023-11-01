@@ -106,6 +106,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
     gap: 3px;
     margin: -15px;
     width: 25%;
@@ -116,6 +117,10 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.showMessaging {
+    visibility: visible;
 }
 
 .messagingDot {

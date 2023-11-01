@@ -5,7 +5,6 @@
     height: 80%;
     padding: 20px;
     /*Glassmorphism*/
-    border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(0, 0, 0, 0.57);
     box-shadow: 5px -5px 12px 0px rgba(255, 255, 255, 0.05) inset, -5px 5px 12px 0px rgba(255, 255, 255, 0.05) inset, 4px 7px 15px 0px rgba(0, 0, 0, 0.08), -1px 0px 2px 0px rgba(201, 201, 201, 0.1) inset;
     backdrop-filter: blur(6px);
@@ -15,11 +14,15 @@
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    transition: background 2s;
-    -webkit-transition: background 2s;
-    -moz-transition: background 2s;
-    -ms-transition: background 2s;
-    -o-transition: background 2s;
+    transition: background, width 2s, 1s;
+    -webkit-transition: background, width 2s, 1s;
+    -moz-transition: background, width 2s, 1s;
+    -ms-transition: background, width 2s, 1s;
+    -o-transition: background, width 2s, 1s;
+}
+
+.containerExtended {
+    width: 300px;
 }
 
 .containerLightMode {

@@ -40,7 +40,8 @@ const MessagesMenu = () => {
                                     </div>
                                 </div>
                                 <div className={styles.username}>
-                                    <div className={styles.messagingContainer}>
+                                    <div className={`${styles.messagingContainer} 
+                                    ${index === users.length - 2 ? styles.showMessaging : ""}`}>
                                         <span className={styles.messagingDot}></span>
                                         <span className={styles.messagingDot}></span>
                                         <span className={styles.messagingDot}></span>

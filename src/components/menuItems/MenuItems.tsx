@@ -3,10 +3,12 @@ import styles from "./menuItems.module.css";
 import { useThemeModeContext } from '../../utils/hooks/useThemeModeContext';
 import { ThemeModeType } from '../../context/ThemeModeContextProvider';
 import { iconsArray } from '../assets/data/iconsArray';
+import { useExtendedMenuContext } from '../../utils/hooks/useExtendedMenuContext';
 
 const MenuItems = () => {
 
     const { themeMode } = useThemeModeContext();
+    const { changeExtendedMenu } = useExtendedMenuContext();
 
     const handleMouseOverMenuIcon = (iconPosition: number, isEntering: boolean) => {
         const iconLabelContainer: (HTMLDivElement | null) = document.querySelector(`#menu-icons_entry-${iconPosition + 1} #icon-label-container`);
@@ -20,6 +22,10 @@ const MenuItems = () => {
                 iconLabel.style.left = "-200px";
             }
         }
+    }
+
+    const iconClicked = () => {
+        changeExtendedMenu();
     }
 
     return (
@@ -36,6 +42,7 @@ const MenuItems = () => {
                             className={`${styles.menuIcon} ${themeMode === ThemeModeType.LIGHT_MODE ? "menu-msgs-light-mode" : ""}`}
                             onMouseEnter={() => handleMouseOverMenuIcon(index, true)}
                             onMouseLeave={() => handleMouseOverMenuIcon(index, false)}
+                            onClick={iconClicked}
                         />
                     </div>
                     <div id="icon-label-container" className={styles.iconLabelContainer}>
