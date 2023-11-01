@@ -8,24 +8,33 @@ import { useExtendedMenuContext } from '../../utils/hooks/useExtendedMenuContext
 const MenuItems = () => {
 
     const { themeMode } = useThemeModeContext();
-    const { changeExtendedMenu } = useExtendedMenuContext();
+    const { extendedMenu, changeExtendedMenu } = useExtendedMenuContext();
 
     const handleMouseOverMenuIcon = (iconPosition: number, isEntering: boolean) => {
         const iconLabelContainer: (HTMLDivElement | null) = document.querySelector(`#menu-icons_entry-${iconPosition + 1} #icon-label-container`);
         const iconLabel: (HTMLDivElement | null) = document.querySelector(`#menu-icons_entry-${iconPosition + 1} #icon-label`);
-        if (iconLabelContainer && iconLabel) {
+        if (iconLabelContainer && iconLabel && !extendedMenu) {
             if (isEntering) {
-                iconLabelContainer.style.opacity = "1";
-                iconLabel.style.left = "10px";
+                iconLabelContainer.classList.add(styles.iconLabelContainerExtended);
+                iconLabel.classList.add(styles.iconLabelMouseOver);
             } else {
-                iconLabelContainer.style.opacity = "0";
-                iconLabel.style.left = "-200px";
+                iconLabelContainer.classList.remove(styles.iconLabelContainerExtended);
+                iconLabel.classList.remove(styles.iconLabelMouseOver);
             }
         }
     }
 
     const iconClicked = () => {
-        changeExtendedMenu();
+        if (!extendedMenu) changeExtendedMenu();
+    }
+
+    const handleMouseOverMenuEntry = (entry: number, isEnterig: boolean) => {
+        const menuEntry: (HTMLDivElement | null) = document.querySelector(`#menu-icons_entry-${entry}`);
+        if (menuEntry && extendedMenu) {
+            if (isEnterig) {
+                menuEntry.classList.add(styles.menuIconContainerHovered);
+            } else menuEntry.classList.remove(styles.menuIconContainerHovered);
+        }
     }
 
     return (
@@ -36,7 +45,12 @@ const MenuItems = () => {
                 </h5>
             </div>
             {iconsArray.map((icon, index) => (
-                <div id={`menu-icons_entry-${index + 1}`} className={styles.menuIconContainer} key={index}>
+                <div id={`menu-icons_entry-${index + 1}`}
+                    className={styles.menuIconContainer}
+                    key={index}
+                    onMouseEnter={() => handleMouseOverMenuEntry(index + 1, true)}
+                    onMouseLeave={() => handleMouseOverMenuEntry(index + 1, false)}
+                >
                     <div className={styles.iconContainer}>
                         <Icon icon={icon.iconName} hFlip={true}
                             className={`${styles.menuIcon} ${themeMode === ThemeModeType.LIGHT_MODE ? "menu-msgs-light-mode" : ""}`}
@@ -45,8 +59,13 @@ const MenuItems = () => {
                             onClick={iconClicked}
                         />
                     </div>
-                    <div id="icon-label-container" className={styles.iconLabelContainer}>
-                        <p id="icon-label" className={styles.iconLabel}>{icon.iconLabel}</p>
+                    <div id="icon-label-container" className={`${styles.iconLabelContainer} 
+                    ${extendedMenu ? styles.iconLabelContainerExtended : ""}`}>
+                        <p id="icon-label" className={`
+                        ${extendedMenu ? styles.iconLabelExtended : styles.iconLabel}
+                        ${themeMode === ThemeModeType.LIGHT_MODE && extendedMenu ? "menu-msgs-light-mode" : ""}`}>
+                            {icon.iconLabel}
+                        </p>
                     </div>
                 </div>
             ))}

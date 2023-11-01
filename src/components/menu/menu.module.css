@@ -14,11 +14,11 @@
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    transition: background, width 2s, 1s;
-    -webkit-transition: background, width 2s, 1s;
-    -moz-transition: background, width 2s, 1s;
-    -ms-transition: background, width 2s, 1s;
-    -o-transition: background, width 2s, 1s;
+    transition: background 2s, width 1s;
+    -webkit-transition: background 2s, width 1s;
+    -moz-transition: background 2s, width 1s;
+    -ms-transition: background 2s, width 1s;
+    -o-transition: background 2s, width 1s;
 }
 
 .containerExtended {

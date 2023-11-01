@@ -27,6 +27,22 @@
     justify-content: center;
     align-items: center;
     width: 250px;
+    height: 100%;
+    margin-bottom: 4px;
+    transition: background-color .4s ease-in;
+    -webkit-transition: background-color .4s ease-in;
+    -moz-transition: background-color .4s ease-in;
+    -ms-transition: background-color .4s ease-in;
+    -o-transition: background-color .4s ease-in;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.menuIconContainerHovered {
+    background-color: rgba(204, 204, 204, .4);
 }
 
 .iconContainer {
@@ -51,11 +67,15 @@
     align-items: center;
     overflow: hidden;
     opacity: 0;
-    transition: opacity .7s ease-in;
-    -webkit-transition: opacity .7s ease-in;
-    -moz-transition: opacity .7s ease-in;
-    -ms-transition: opacity .7s ease-in;
-    -o-transition: opacity .7s ease-in;
+    transition: opacity .4s ease-in;
+    -webkit-transition: opacity .4s ease-in;
+    -moz-transition: opacity .4s ease-in;
+    -ms-transition: opacity .4s ease-in;
+    -o-transition: opacity .4s ease-in;
+}
+
+.iconLabelContainerExtended {
+    opacity: 1;
 }
 
 .iconLabel {
@@ -72,11 +92,27 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    transition: left .5s;
-    -webkit-transition: left .5s;
-    -moz-transition: left .5s;
-    -ms-transition: left .5s;
-    -o-transition: left .5s;
+    transition: left 700ms, color 2s, background-color 2s, box-shadow 2s;
+    -webkit-transition: left 700ms, color 2s, background-color 2s, box-shadow 2s;
+    -moz-transition: left 700ms, color 2s, background-color 2s, box-shadow 2s;
+    -ms-transition: left 700ms, color 2s, background-color 2s, box-shadow 2s;
+    -o-transition: left 700ms, color 2s, background-color 2s, box-shadow 2s;
+}
+
+.iconLabelMouseOver {
+    left: 10px;
+}
+
+.iconLabelExtended {
+    left: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    transition: color 2s;
+    -webkit-transition: color 2s;
+    -moz-transition: color 2s;
+    -ms-transition: color 2s;
+    -o-transition: color 2s;
 }
 
 .menuIcon,

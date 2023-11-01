@@ -41,11 +41,11 @@
     height: 30px;
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 1;
-    transition: opacity, width .5s, 1s;
-    -webkit-transition: opacity, width .5s, 1s;
-    -moz-transition: opacity, width .5s, 1s;
-    -ms-transition: opacity, width .5s, 1s;
-    -o-transition: opacity, width .5s, 1s;
+    transition: opacity .5s, width 1s;
+    -webkit-transition: opacity .5s, width 1s, background-color 2s;
+    -moz-transition: opacity .5s, width 1s;
+    -ms-transition: opacity .5s, width 1s;
+    -o-transition: opacity .5s, width 1s;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -58,6 +58,11 @@
     height: 20px;
     padding-right: 1px;
     color: rgba(255, 255, 255, 0.7);
+    transition: color 2s;
+    -webkit-transition: color 2s;
+    -moz-transition: color 2s;
+    -ms-transition: color 2s;
+    -o-transition: color 2s;
 }
 
 .unextendContainerDisplay {
