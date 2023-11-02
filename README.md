@@ -34,8 +34,9 @@ In the future, I am looking forward to making it dynamic so that notifications a
 
 ## Setup
 
-Project is deployed (<a href="https://menu-component-five.vercel.app/">GitHub challenge</a>), but if you want to run it locally:
 See a demo vide <a href="https://drive.google.com/file/d/1KcXGNslDyAes6y5Z9eq9m5_PQXD--Wo6/view?usp=sharing">here</a>
+<br/>
+Project is deployed (<a href="https://menu-component-five.vercel.app/">GitHub challenge</a>), but if you want to run it locally:
 
 ```
 git clone https://github.com/ali-hourag/menu_component
